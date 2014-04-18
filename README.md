@@ -11,6 +11,8 @@ this way, you can see how your fragments interact with your activities.
 If you see any discrepancies or errors in this diagram, please submit a pull
 request or contact [steve@staticfree.info](mailto:steve@staticfree.info).
 
+![A Complete Android Fragment & Activity Lifecycle](complete_android_fragment_lifecycle.png)
+
 ### Some Notes
 
 This intentionally leaves off user-triggered callbacks (such as
