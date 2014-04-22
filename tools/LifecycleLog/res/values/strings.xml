@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LifecycleLog</string>
+    <string name="app_name_compat">LifecycleLog Compat</string>
+    <string name="action_settings">Settings</string>
+    <string name="message">Please see logcat</string>
+
+</resources>
