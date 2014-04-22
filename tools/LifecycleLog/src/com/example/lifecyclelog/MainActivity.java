@@ -9,11 +9,12 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 
-
+import static com.example.lifecyclelog.Util.LifecycleState.CALL_TO_SUPER;
+import static com.example.lifecyclelog.Util.LifecycleState.RETURN_FROM_SUPER;
 import static com.example.lifecyclelog.Util.recLifeCycle;
+
 /**
  * A standard Android Activity.
  */
@@ -21,9 +22,9 @@ import static com.example.lifecyclelog.Util.recLifeCycle;
 public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        recLifeCycle(getClass(), "→☐");
+        recLifeCycle(getClass(), CALL_TO_SUPER);
         super.onCreate(savedInstanceState);
-        recLifeCycle(getClass(), "☐→");
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
         setContentView(R.layout.activity_main);
 
         FragmentManager.enableDebugLogging(true);
@@ -32,137 +33,161 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        recLifeCycle(getClass(), "→☐");
+        recLifeCycle(getClass(), CALL_TO_SUPER);
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
         return true;
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        recLifeCycle(getClass(), "→☐");
+        recLifeCycle(getClass(), CALL_TO_SUPER);
         super.onActivityResult(requestCode, resultCode, data);
-        recLifeCycle(getClass(), "☐→");
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
     }
 
     @Override
     public void onAttachedToWindow() {
-        recLifeCycle(getClass(), "→☐");
+        recLifeCycle(getClass(), CALL_TO_SUPER);
         super.onAttachedToWindow();
-        recLifeCycle(getClass(), "☐→");
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
     }
 
     @Override
     public void onAttachFragment(Fragment fragment) {
-        recLifeCycle(getClass(), "→☐");
+        recLifeCycle(getClass(), CALL_TO_SUPER);
         super.onAttachFragment(fragment);
-        recLifeCycle(getClass(), "☐→");
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
     }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
-        recLifeCycle(getClass(), "→☐");
+        recLifeCycle(getClass(), CALL_TO_SUPER);
         super.onConfigurationChanged(newConfig);
-        recLifeCycle(getClass(), "☐→");
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
     }
 
     @Override
     public void onContentChanged() {
-        recLifeCycle(getClass(), "→☐");
+        recLifeCycle(getClass(), CALL_TO_SUPER);
         super.onContentChanged();
-        recLifeCycle(getClass(), "☐→");
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
     }
 
     @Override
     protected void onDestroy() {
-        recLifeCycle(getClass(), "→☐");
+        recLifeCycle(getClass(), CALL_TO_SUPER);
         super.onDestroy();
-        recLifeCycle(getClass(), "☐→");
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
+    }
+
+    @Override
+    public void onDetachedFromWindow() {
+        recLifeCycle(getClass(), CALL_TO_SUPER);
+        super.onDetachedFromWindow();
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
     }
 
     @Override
     protected void onNewIntent(Intent intent) {
-        recLifeCycle(getClass(), "→☐");
+        recLifeCycle(getClass(), CALL_TO_SUPER);
         super.onNewIntent(intent);
-        recLifeCycle(getClass(), "☐→");
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
     }
 
     @Override
     protected void onPause() {
-        recLifeCycle(getClass(), "→☐");
+        recLifeCycle(getClass(), CALL_TO_SUPER);
         super.onPause();
-        recLifeCycle(getClass(), "☐→");
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
     }
 
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
-        recLifeCycle(getClass(), "→☐");
+        recLifeCycle(getClass(), CALL_TO_SUPER);
         super.onPostCreate(savedInstanceState);
-        recLifeCycle(getClass(), "☐→");
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
 
     }
 
     @Override
     protected void onPostResume() {
-        recLifeCycle(getClass(), "→☐");
+        recLifeCycle(getClass(), CALL_TO_SUPER);
         super.onPostResume();
-        recLifeCycle(getClass(), "☐→");
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(final Menu menu) {
+        recLifeCycle(getClass(), CALL_TO_SUPER);
+        boolean result = super.onPrepareOptionsMenu(menu);
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
+
+        return result;
     }
 
     @Override
     protected void onRestart() {
-        recLifeCycle(getClass(), "→☐");
+        recLifeCycle(getClass(), CALL_TO_SUPER);
         super.onRestart();
-        recLifeCycle(getClass(), "☐→");
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
     }
 
     @Override
     protected void onResume() {
-        recLifeCycle(getClass(), "→☐");
+        recLifeCycle(getClass(), CALL_TO_SUPER);
         super.onResume();
-        recLifeCycle(getClass(), "☐→");
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(final Bundle savedInstanceState) {
+        recLifeCycle(getClass(), CALL_TO_SUPER);
+        super.onRestoreInstanceState(savedInstanceState);
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
     }
 
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
-        recLifeCycle(getClass(), "→☐");
+        recLifeCycle(getClass(), CALL_TO_SUPER);
         super.onWindowFocusChanged(hasFocus);
-        recLifeCycle(getClass(), "☐→");
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
     }
 
     @Override
     protected void onUserLeaveHint() {
-        recLifeCycle(getClass(), "→☐");
+        recLifeCycle(getClass(), CALL_TO_SUPER);
         super.onUserLeaveHint();
-        recLifeCycle(getClass(), "☐→");
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
     }
 
     @Override
     protected void onStart() {
-        recLifeCycle(getClass(), "→☐");
+        recLifeCycle(getClass(), CALL_TO_SUPER);
         super.onStart();
-        recLifeCycle(getClass(), "☐→");
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
 
     }
 
     @Override
     protected void onStop() {
-        recLifeCycle(getClass(), "→☐");
+        recLifeCycle(getClass(), CALL_TO_SUPER);
         super.onStop();
-        recLifeCycle(getClass(), "☐→");
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
     }
 
     @Override
     protected void onSaveInstanceState(final Bundle outState) {
-        recLifeCycle(getClass(), "→☐");
+        recLifeCycle(getClass(), CALL_TO_SUPER);
         super.onSaveInstanceState(outState);
-        recLifeCycle(getClass(), "☐→");
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
     }
 
     @Override
     public void onUserInteraction() {
-        recLifeCycle(getClass(), "→☐");
+        recLifeCycle(getClass(), CALL_TO_SUPER);
         super.onUserInteraction();
-        recLifeCycle(getClass(), "☐→");
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
     }
 }
