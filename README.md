@@ -16,7 +16,7 @@ request or contact [steve@staticfree.info](mailto:steve@staticfree.info).
 ### Some Notes
 
 This intentionally leaves off user-triggered callbacks (such as
-`onCreateOptionsMenu()`), focusing on the lifecycle stages that are triggered
+`onOptionsItemSelected()`), focusing on the lifecycle stages that are triggered
 by the system, in order to keep the diagram more focused on the parts that are
 hard to follow.
 
