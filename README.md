@@ -11,6 +11,8 @@ this way, you can see how your fragments interact with your activities.
 If you see any discrepancies or errors in this diagram, please submit a pull
 request or contact [steve@staticfree.info](mailto:steve@staticfree.info).
 
+Vector versions suitable for printing: [PDF][] or [SVG][]
+
 ![A Complete Android Fragment & Activity Lifecycle](complete_android_fragment_lifecycle.png)
 
 ### Some Notes
@@ -25,3 +27,5 @@ This diagram was originally created in [Dia][] and has been rendered to PNG via
 
 [Dia]: http://dia-installer.de/
 [Inkscape]: http://inkscape.org/
+[PDF]: complete_android_fragment_lifecycle.pdf
+[SVG]: complete_android_fragment_lifecycle.svg
