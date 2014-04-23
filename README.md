@@ -27,7 +27,15 @@ to SVG, hand-tweaked to fix font sizes, and imported into [Inkscape][] to do an
 SVG, PDF, and PNG render. I hope to find a better workflow for this going forward;
 patches always welcome.
 
+### License
+
+This diagram (in all its various forms and renders) is licensed under the
+[Creative Commons BY-SA 4.0 license][CC-BY-SA]. If you would like it under a
+different Creative Commons license, please contact me and we can figure
+something out.
+
 [Dia]: http://dia-installer.de/
 [Inkscape]: http://inkscape.org/
 [PDF]: complete_android_fragment_lifecycle.pdf
 [SVG]: complete_android_fragment_lifecycle.svg
+[CC-BY-SA]: https://creativecommons.org/licenses/by-sa/4.0/
