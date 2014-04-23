@@ -22,8 +22,10 @@ This intentionally leaves off user-triggered callbacks (such as
 by the system, in order to keep the diagram more focused on the parts that are
 hard to follow.
 
-This diagram was originally created in [Dia][] and has been rendered to PNG via
-[Inkscape][].
+The canonical format of the diagram is the [Dia][] file. It was then exported
+to SVG, hand-tweaked to fix font sizes, and imported into [Inkscape][] to do an
+SVG, PDF, and PNG render. I hope to find a better workflow for this going forward;
+patches always welcome.
 
 [Dia]: http://dia-installer.de/
 [Inkscape]: http://inkscape.org/
