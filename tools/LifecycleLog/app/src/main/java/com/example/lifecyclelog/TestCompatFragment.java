@@ -104,7 +104,6 @@ public class TestCompatFragment extends Fragment {
         recLifeCycle(getClass(), CALL_TO_SUPER);
         super.onDetach();
         recLifeCycle(getClass(), RETURN_FROM_SUPER);
-
     }
 
     @Override

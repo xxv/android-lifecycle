@@ -81,6 +81,13 @@ public class MainFragmentActivity extends FragmentActivity {
     }
 
     @Override
+    public void onDetachedFromWindow() {
+        recLifeCycle(getClass(), CALL_TO_SUPER);
+        super.onDetachedFromWindow();
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
+    }
+
+    @Override
     protected void onNewIntent(Intent intent) {
         recLifeCycle(getClass(), CALL_TO_SUPER);
         super.onNewIntent(intent);
