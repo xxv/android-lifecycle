@@ -11,9 +11,19 @@ this way, you can see how your fragments interact with your activities.
 If you see any discrepancies or errors in this diagram, please submit a pull
 request or contact [steve@staticfree.info](mailto:steve@staticfree.info).
 
+## Activity and Fragment Lifecycles
+
 Vector versions suitable for printing: [PDF][] or [SVG][]
 
 ![A Complete Android Fragment & Activity Lifecycle](complete_android_fragment_lifecycle.png)
+
+## Activity, Fragment and FragmentManager Lifecycle Integration
+
+Vector versions suitable for printing [PDF2][] or [SVG2][]
+
+![A Integration Of Fragments into Activities via Fragment Manager](android-lifecycle-activity-to-fragments.png)
+
+[External Hosting](http://imgur.com/lUtGxVO)
 
 ### Some Notes
 
@@ -39,3 +49,5 @@ something out.
 [PDF]: complete_android_fragment_lifecycle.pdf
 [SVG]: complete_android_fragment_lifecycle.svg
 [CC-BY-SA]: https://creativecommons.org/licenses/by-sa/4.0/
+[PDF2]: android-lifecycle-activity-to-fragments.pdf
+[SVG2]: android-lifecycle-activity-to-fragments.svg
