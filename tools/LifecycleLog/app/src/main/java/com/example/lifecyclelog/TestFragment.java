@@ -3,6 +3,7 @@ package com.example.lifecyclelog;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Build;
@@ -14,7 +15,7 @@ import static com.example.lifecyclelog.Util.LifecycleState.CALL_TO_SUPER;
 import static com.example.lifecyclelog.Util.LifecycleState.RETURN_FROM_SUPER;
 import static com.example.lifecyclelog.Util.recLifeCycle;
 
-@TargetApi(Build.VERSION_CODES.KITKAT)
+@TargetApi(Build.VERSION_CODES.M)
 public class TestFragment extends Fragment {
 
     @Override
@@ -50,11 +51,34 @@ public class TestFragment extends Fragment {
 
     }
 
+    @TargetApi(Build.VERSION_CODES.M)
+    @Override
+    public void onAttach(Context context) {
+        recLifeCycle(getClass(), CALL_TO_SUPER);
+        super.onAttach(context);
+        recLifeCycle(getClass(), RETURN_FROM_SUPER);
+        commonOnAttach(getActivity());
+    }
+
+    /*
+     * Deprecated on API 23
+     * Use onAttachToContext instead
+     */
+    @SuppressWarnings("deprecation")
     @Override
     public void onAttach(Activity activity) {
         recLifeCycle(getClass(), CALL_TO_SUPER);
         super.onAttach(activity);
         recLifeCycle(getClass(), RETURN_FROM_SUPER);
+
+        // Prevent double call - Android M calls both onAttach() lifecycle functions for backward compatibility
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
+            commonOnAttach(activity);
+        }
+    }
+
+    private void commonOnAttach(Activity activity) {
+        // Do some stuff for attach.
     }
 
     @Override

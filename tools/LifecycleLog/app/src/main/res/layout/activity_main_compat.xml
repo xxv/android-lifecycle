@@ -9,8 +9,9 @@
     tools:context=".MainActivity" >
 
     <fragment android:id="@+id/test_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        class="com.example.lifecyclelog.TestCompatFragment" />
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              class="com.example.lifecyclelog.TestCompatFragment"
+              tools:layout="@layout/fragment_test"/>
 
 </RelativeLayout>
