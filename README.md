@@ -23,8 +23,6 @@ Vector versions suitable for printing [PDF2][] or [SVG2][]
 
 ![A Integration Of Fragments into Activities via Fragment Manager](android-lifecycle-activity-to-fragments.png)
 
-[External Hosting](http://imgur.com/lUtGxVO)
-
 ### Some Notes
 
 This intentionally leaves off user-triggered callbacks (such as
